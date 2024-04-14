@@ -1,1 +1,6 @@
 
+nettool
+*.dSYM
+rand7
+myEcho
+bitwiseAnd
