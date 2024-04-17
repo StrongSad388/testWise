@@ -5,3 +5,5 @@ rand7
 myEcho
 bitwiseAnd
 myDoubleLinkedList
+*.class
+*.jar
