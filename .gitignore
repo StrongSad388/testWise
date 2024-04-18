@@ -1,6 +1,9 @@
-RomanToDecimal.class
+
 nettool
-bitwiseAnd
-doubleLinkedList
-myEcho
+*.dSYM
 rand7
+myEcho
+bitwiseAnd
+myDoubleLinkedList
+*.class
+*.jar
