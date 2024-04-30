@@ -10,19 +10,19 @@ public class MessageDecoder {
         System.out.println("Number of ways to decode the message: " + ways);
     }
 
-    public static int numDecodings(String s) {
-        if (s == null || s.length() == 0) {
+    public static int numDecodings(String theNumericString) {
+        if (theNumericString == null || theNumericString.length() == 0) {
             return 0;
         }
 
-        int n = s.length();
-        int[] dp = new int[n + 1];
+        int length = theNumericString.length();
+        int[] dp = new int[length + 1];
         dp[0] = 1;
-        dp[1] = s.charAt(0) != '0' ? 1 : 0;
+        dp[1] = theNumericString.charAt(0) != '0' ? 1 : 0;
 
-        for (int i = 2; i <= n; i++) {
-            int oneDigit = Integer.parseInt(s.substring(i - 1, i));
-            int twoDigits = Integer.parseInt(s.substring(i - 2, i));
+        for (int i = 2; i <= length; i++) {
+            int oneDigit = Integer.parseInt(theNumericString.substring(i - 1, i));
+            int twoDigits = Integer.parseInt(theNumericString.substring(i - 2, i));
 
             if (oneDigit >= 1 && oneDigit <= 9) {
                 dp[i] += dp[i - 1];
@@ -32,6 +32,6 @@ public class MessageDecoder {
             }
         }
 
-        return dp[n];
+        return dp[length];
     }
 }
